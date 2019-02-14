@@ -1,13 +1,13 @@
 {
-  "main.css": "/floof/static/css/main.0eacb25e.chunk.css",
-  "main.js": "/floof/static/js/main.2d2f368a.chunk.js",
-  "main.js.map": "/floof/static/js/main.2d2f368a.chunk.js.map",
+  "main.css": "/floof/static/css/main.ab162100.chunk.css",
+  "main.js": "/floof/static/js/main.c6e7cf70.chunk.js",
+  "main.js.map": "/floof/static/js/main.c6e7cf70.chunk.js.map",
   "runtime~main.js": "/floof/static/js/runtime~main.511a5e44.js",
   "runtime~main.js.map": "/floof/static/js/runtime~main.511a5e44.js.map",
   "static/js/2.4d551dd8.chunk.js": "/floof/static/js/2.4d551dd8.chunk.js",
   "static/js/2.4d551dd8.chunk.js.map": "/floof/static/js/2.4d551dd8.chunk.js.map",
   "index.html": "/floof/index.html",
-  "precache-manifest.7f3edebed36064e616d0cdb145ce1ed4.js": "/floof/precache-manifest.7f3edebed36064e616d0cdb145ce1ed4.js",
+  "precache-manifest.e5318521cacde539a6e80dff2b537a8d.js": "/floof/precache-manifest.e5318521cacde539a6e80dff2b537a8d.js",
   "service-worker.js": "/floof/service-worker.js",
-  "static/css/main.0eacb25e.chunk.css.map": "/floof/static/css/main.0eacb25e.chunk.css.map"
+  "static/css/main.ab162100.chunk.css.map": "/floof/static/css/main.ab162100.chunk.css.map"
 }
