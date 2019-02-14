@@ -1,5 +1,9 @@
+:root {
+  --theme: #282c34; 
+}
+
 .header {
-  background-color: #282c34;
+  background-color: var(--theme);
   color: white;
   display: flex;
   flex-direction: column;
@@ -10,5 +14,22 @@
 }
 
 .img {
-  size: 200px;
+  width: 100vw;
+}
+
+.container {
+  margin: 0 auto 0 auto;
+  text-align: center;
+  width: 90%;
+}
+
+.btn-next {
+  background-color: var(--theme);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  margin: 0.5em;
+  padding: 0.5em;
+  text-decoration: none;
 }

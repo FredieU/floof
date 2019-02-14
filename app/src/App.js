@@ -35,6 +35,13 @@ class App extends Component {
           <small>Discover all the doggos.</small>
         </header>
         <main>
+          <section className='container'>
+            <button 
+              className='btn-next'
+              onClick={ this.random }>
+              Next
+            </button>
+          </section>
           <img 
             alt=''
             className='img'
