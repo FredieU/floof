@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/floof/static/js/runtime~main.511a5e44.js"
   },
   {
-    "revision": "64588f5f9134d45edd87",
-    "url": "/floof/static/js/main.64588f5f.chunk.js"
+    "revision": "d90d35fac968d050fb70",
+    "url": "/floof/static/js/main.d90d35fa.chunk.js"
   },
   {
     "revision": "4d551dd81841a3b1e6af",
     "url": "/floof/static/js/2.4d551dd8.chunk.js"
   },
   {
-    "revision": "64588f5f9134d45edd87",
-    "url": "/floof/static/css/main.83914ac8.chunk.css"
+    "revision": "d90d35fac968d050fb70",
+    "url": "/floof/static/css/main.014a48ae.chunk.css"
   },
   {
-    "revision": "3a0edbb4b25d84548d025b871cda7ebd",
+    "revision": "2df22d8afc93281068fd7e9e7797d02a",
     "url": "/floof/index.html"
   }
 ];
