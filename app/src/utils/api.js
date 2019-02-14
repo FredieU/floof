@@ -22,10 +22,7 @@ export default (endpoint, value = '') => {
       method: 'GET',
       url: url
     })
-    .then(res => {
-      console.log(res.data);
-      resolve(res.data);
-    })
+    .then(res => resolve(res.data))
     .catch(err => reject(err));
   });
 }

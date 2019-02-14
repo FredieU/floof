@@ -10,7 +10,8 @@ class App extends Component {
       error: ''
     };
 
-    this.random = this.random.bind(this);
+    this.generate = this.generate.bind(this);
+    this.copyUrl = this.copyUrl.bind(this);
   }
 
   componentDidMount() {
@@ -20,7 +21,13 @@ class App extends Component {
       .catch(err => this.setState({error: err}));
   }
 
-  random() {
+  copyUrl() {
+    const copyText = document.getElementById('url');
+    copyText.select();
+    document.execCommand('copy');
+  }
+
+  generate() {
     return dogAPI('random')
     .then(response => this.setState({url: response.message}))
     .catch(err => this.setState({error: err}));
@@ -35,19 +42,27 @@ class App extends Component {
           <small>Discover all the doggos.</small>
         </header>
         <main>
-          <section className='container'>
-            <button 
-              className='btn-next'
-              onClick={ this.random }>
-              Next
-            </button>
-          </section>
+          <button 
+            className='btn btn-copy'
+            onClick={ this.copyUrl }>
+            Copy URL
+          </button>
+          <button 
+            className='btn btn-generate'
+            onClick={ this.generate }>
+            Generate
+          </button>
           <img 
             alt=''
             className='img'
             onClick={ this.random }
             src={ this.state.url }
           />
+          <textarea
+            id='url'
+            value={ this.state.url }
+          >
+          </textarea>
         </main>
       </React.Fragment>
     );
