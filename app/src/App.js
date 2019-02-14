@@ -1,26 +1,48 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import dogAPI from './utils/api.js';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      url: '',
+      error: ''
+    };
+
+    this.random = this.random.bind(this);
+  }
+
+  componentDidMount() {
+    console.log('App - MOUNT');
+    return dogAPI('random')
+      .then(response => this.setState({url: response.message}))
+      .catch(err => this.setState({error: err}));
+  }
+
+  random() {
+    return dogAPI('random')
+    .then(response => this.setState({url: response.message}))
+    .catch(err => this.setState({error: err}));
+  }
+
   render() {
+    console.log('App - RENDER');
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+      <React.Fragment>
+        <header className="header">
+          <h1>Floof</h1>
+          <small>Discover all the doggos.</small>
         </header>
-      </div>
+        <main>
+          <img 
+            alt=''
+            className='img'
+            onClick={ this.random }
+            src={ this.state.url }
+          />
+        </main>
+      </React.Fragment>
     );
   }
 }
