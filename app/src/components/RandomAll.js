@@ -1,35 +1,19 @@
 import React, { Component } from 'react';
-import dogAPI from '../utils/api.js';
+import { connect } from 'react-redux';
+import { fetchUrl } from '../actions/urlActions';
 
 class RandomAll extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      url: '',
-      error: ''
-    };
-
-    this.generate = this.generate.bind(this);
-    this.copyUrl = this.copyUrl.bind(this);
-  }
-
+  // Initial fetch for first render
   componentDidMount() {
-    console.log('RandomAll - MOUNT');
-    return dogAPI('random')
-      .then(response => this.setState({url: response.message}))
-      .catch(err => this.setState({error: err}));
+    console.log('RandomAll - componentDidMount');
+    this.props.fetchUrl();
   }
 
+  // Copy URL from textarea element
   copyUrl() {
     const copyText = document.getElementById('url');
     copyText.select();
     document.execCommand('copy');
-  }
-
-  generate() {
-    return dogAPI('random')
-    .then(response => this.setState({url: response.message}))
-    .catch(err => this.setState({error: err}));
   }
 
   render() {
@@ -44,21 +28,27 @@ class RandomAll extends Component {
           </button>
           <button 
             className='btn btn-generate'
-            onClick={ this.generate }>
+            onClick={ this.props.fetchUrl }>
             Generate
           </button>
         </section>
+        {this.props.error}
         <img 
           alt=''
           className='img'
-          onClick={ this.generate }
-          src={ this.state.url } />
+          onClick={ this.props.fetchUrl }
+          src={ this.props.url } />
         <textarea
           id='url'
-          value={ this.state.url } />
+          readOnly
+          value={ this.props.url } />
       </React.Fragment>
     );
   }
 }
 
-export default RandomAll;
+const mapStateToProps = state => ({
+  url: state.imageUrl.url
+})
+
+export default connect(mapStateToProps, { fetchUrl })(RandomAll);

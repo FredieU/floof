@@ -1,0 +1,7 @@
+Defining initial state when setting up store
+- Defined in 'src/store.js' for createStore().
+- Also defined in 'src/reducers/urlReducer.js' to pass as argument for reducer.
+
+State tree structure (unnecessary keys: state.imageUrl.url)
+- From combineReducers() in 'src/reducers/index.js'
+- Expanded in individual reducer 'src/reducers/urlReducer.js'
