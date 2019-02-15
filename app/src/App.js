@@ -42,16 +42,18 @@ class App extends Component {
           <small>Discover all the doggos.</small>
         </header>
         <main>
-          <button 
-            className='btn btn-copy'
-            onClick={ this.copyUrl }>
-            Copy URL
-          </button>
-          <button 
-            className='btn btn-generate'
-            onClick={ this.generate }>
-            Generate
-          </button>
+          <section className='btn-group'>
+            <button 
+              className='btn btn-copy'
+              onClick={ this.copyUrl }>
+              Copy URL
+            </button>
+            <button 
+              className='btn btn-generate'
+              onClick={ this.generate }>
+              Generate
+            </button>
+          </section>
           <img 
             alt=''
             className='img'
