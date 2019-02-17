@@ -12,7 +12,7 @@ export default (endpoint, value = '') => {
       break;
     }
     default: {
-      url = 'https://dog.ceo/api/breeds/mage/random';
+      url = 'https://dog.ceo/api/breeds/image/random';
       break;
     }
   }

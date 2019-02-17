@@ -45,3 +45,10 @@
 .btn-generate {
   width: 70vw;
 }
+
+@media (min-width: 600px) {
+  .img {
+    height: 100vh;
+    width: auto;
+  }
+}
