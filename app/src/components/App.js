@@ -7,7 +7,7 @@ class App extends Component {
     console.log('App - RENDER');
     return (
       <React.Fragment>
-        <header className="header">
+        <header className='header'>
           <h1>Floof</h1>
           <small>Discover all the doggos.</small>
         </header>

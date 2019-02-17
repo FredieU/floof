@@ -1,30 +1,26 @@
 :root {
-  --theme: #282c34; 
+  --theme-1: #454545;
+  --theme-2: #4E6B7B;
+  --theme-3: #6C817A;
 }
 
 .header {
-  background-color: var(--theme);
+  background-color: var(--theme-1);
   color: white;
   display: flex;
   flex-direction: column;
   font-size: calc(10px + 2vmin);
+  height: 15vh;
   justify-content: center;
-  min-height: 15vh;
   padding: 0 1em 0 1em;
 }
 
 .img {
-  width: 100vw;
-}
-
-.container {
-  margin: 0 auto 0 auto;
-  text-align: center;
-  width: 90%;
+  max-width: 100vw;
 }
 
 .btn {
-  background-color: var(--theme);
+  background-color: var(--theme-1);
   border: none;
   color: white;
   font-size: 1em;
@@ -34,21 +30,42 @@
 }
 
 .btn-group {
+  bottom: 0;
   display: grid;
+  position: fixed;
   grid-template-columns: 30vw 70vw;
+  grid-template-rows: 5vh;
 }
 
 .btn-copy {
+  background-color: var(--theme-2);
   width: 30vw;
 }
 
 .btn-generate {
+  background-color: var(--theme-3);
   width: 70vw;
 }
 
+#url {
+  width: 100vw;
+}
+
 @media (min-width: 600px) {
+  .container {
+    margin: 0 auto 0 auto;
+    text-align: center;
+    width: 90%;
+  }
+
   .img {
-    height: 100vh;
+    height: 85vh;
+    margin: 0 auto;
     width: auto;
+  }
+
+  #url {
+    display: block;
+    width: 50vw;
   }
 }

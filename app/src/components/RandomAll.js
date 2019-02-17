@@ -32,16 +32,17 @@ class RandomAll extends Component {
             Generate
           </button>
         </section>
-        {this.props.error}
-        <img 
-          alt=''
-          className='img'
-          onClick={ this.props.fetchUrl }
-          src={ this.props.url } />
-        <textarea
-          id='url'
-          readOnly
-          value={ this.props.url } />
+        <section className='container'>
+          <img 
+            alt=''
+            className='img'
+            onClick={ this.props.fetchUrl }
+            src={ this.props.url } />
+          <textarea
+            id='url'
+            readOnly
+            value={ this.props.url } />
+        </section>
       </React.Fragment>
     );
   }
