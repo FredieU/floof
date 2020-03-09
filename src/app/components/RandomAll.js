@@ -5,7 +5,6 @@ import { fetchUrl } from '../redux/actions/urlActions';
 class RandomAll extends Component {
   // Initial fetch for first render
   componentDidMount() {
-    console.log('RandomAll - componentDidMount');
     this.props.fetchUrl();
   }
 
@@ -17,7 +16,6 @@ class RandomAll extends Component {
   }
 
   render() {
-    console.log('RandomAll - RENDER');
     return (
       <React.Fragment>
         <section className="btn-group">
