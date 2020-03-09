@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/floof/static/css/main.390cd93a.chunk.css"
   },
   {
-    "revision": "ea0f0070c818ccba40de02c77560bb5b",
+    "revision": "02db919b18ac2c835b571b42260b7082",
     "url": "/floof/index.html"
   }
 ];
