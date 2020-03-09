@@ -1,11 +1,11 @@
 :root {
-  --theme-1: #454545;
-  --theme-2: #4E6B7B;
-  --theme-3: #6C817A;
+  --background: #454545;
+  --primary: #007cbe;
+  --secondary: #00b377;
 }
 
 .header {
-  background-color: var(--theme-1);
+  background-color: var(--background);
   color: white;
   display: flex;
   flex-direction: column;
@@ -24,8 +24,12 @@
   width: auto;
 }
 
+.img-url {
+  width: 100%;
+}
+
 .btn {
-  background-color: var(--theme-1);
+  background-color: var(--background);
   border: none;
   color: white;
   font-size: 1em;
@@ -43,12 +47,12 @@
 }
 
 .btn-copy {
-  background-color: var(--theme-2);
+  background-color: var(--primary);
   width: 30vw;
 }
 
 .btn-generate {
-  background-color: var(--theme-3);
+  background-color: var(--secondary);
   width: 70vw;
 }
 

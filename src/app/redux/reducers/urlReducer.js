@@ -1,4 +1,4 @@
-import { FETCH_URL, ERROR } from '../actions/types';
+import { FETCH_URL, ERROR } from '../types';
 
 const initialState = {};
 
@@ -9,15 +9,15 @@ export default (state = initialState, action) => {
       return {
         // Spread existing state if any
         ...state,
-        url: action.payload
-      }
+        url: action.payload,
+      };
     case ERROR:
       console.log('REDUCER - urlReducer - ERROR');
       return {
         ...state,
-        error: action.payload
-      }
+        error: action.payload,
+      };
     default:
       return state;
   }
-}
+};
