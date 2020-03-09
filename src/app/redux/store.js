@@ -10,7 +10,7 @@ const middleware = [thunk];
 const store = createStore(
   rootReducer, // Main reducer linking all necessary reducer functions
   initialState, // Initial state
-  applyMiddleware(...middleware) // Enhancers/middleware
+  applyMiddleware(...middleware), // Enhancers/middleware
 );
 
 export default store;

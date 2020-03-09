@@ -1,17 +1,17 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './components/App';
+import App from './app/App';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 // Redux imports
 import { Provider } from 'react-redux';
-import store from './store';
+import store from './app/redux/store';
 
 render(
-  <Provider store={ store }>
+  <Provider store={store}>
     <App />
-  </Provider>, 
-  document.getElementById('root')
+  </Provider>,
+  document.getElementById('root'),
 );
 
 // If you want your app to work offline and load faster, you can change
