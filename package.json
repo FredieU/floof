@@ -1,24 +1,43 @@
 {
   "name": "floof",
   "version": "0.1.0",
+  "homepage": "https://fredieu.github.io/floof",
   "private": true,
+  "scripts": {
+    "build:dev": "rimraf build && react-scripts build",
+    "build:prod": "rimraf dist && webpack --config webpack.prod.js",
+    "clean": "rimraf node_modules",
+    "deploy:dev": "gh-pages -d build",
+    "deploy:prod": "firebase deploy",
+    "eject": "react-scripts eject",
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "test": "react-scripts test"
+  },
   "dependencies": {
     "axios": "^0.18.0",
+    "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.1.1",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^3.2.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-redux": "^6.0.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
     "redux": "^4.0.1",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.41.6",
+    "webpack-merge": "^4.2.2"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "firebase-tools": "^7.14.0",
+    "gh-pages": "^2.0.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpackbar": "^4.0.0"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,9 +47,5 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ],
-  "devDependencies": {
-    "gh-pages": "^2.0.1"
-  },
-  "homepage": "https://fredieu.github.io/floof"
+  ]
 }
