@@ -12,7 +12,7 @@ class App extends Component {
       <>
         <header className={`header ${expandHeader ? 'header__expand' : ''}`}>
           <h1 onClick={toggleHeader}>floof.</h1>
-          <button className="btn btn-start" onClick={toggleHeader}>Discover all the floofs</button>
+          {expandHeader && <button className="btn btn-start" onClick={toggleHeader}>Discover all the floofs</button>}
         </header>
         <main>
           <RandomAll />
