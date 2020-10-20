@@ -1,0 +1,44 @@
+.img {
+  margin-top: 15vh;
+  height: 80vh;
+  width: auto;
+  border-radius: 2rem;
+}
+
+#img-url {
+  width: 0;
+}
+
+.btn-group {
+  bottom: 0;
+  display: none;
+  position: fixed;
+  grid-template-columns: 30vw 70vw;
+  grid-template-rows: 5vh;
+  z-index: -1;
+}
+
+.btn.btn-copy {
+  background-color: var(--primary);
+  width: 30vw;
+}
+
+.btn.btn-generate {
+  background-color: var(--secondary);
+  width: 70vw;
+}
+
+#url {
+  width: 100vw;
+}
+
+@media (max-width: 600px) {
+  .btn-group {
+    grid-template-rows: 10vh;
+  }
+
+  .img {
+    height: auto;
+    width: 90vw;
+  }
+}

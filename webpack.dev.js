@@ -10,7 +10,7 @@ module.exports = merge(config, {
     hot: true,
     noInfo: true,
     stats: 'errors-only',
-    after: function(app, server) {
+    after: function (app, server) {
       console.log(
         `\u001b[1m\u001b[34mFloof\u001b[39m\u001b[22m Running on \u001b[1m\u001b[34mhttp://${server.options.host}:${server.options.port}\u001b[39m\u001b[22m`,
       );
@@ -18,7 +18,7 @@ module.exports = merge(config, {
   },
   plugins: [
     new WebpackBar({
-      name: 'Floof',
+      name: 'floof',
     }),
   ],
 });

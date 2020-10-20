@@ -1,3 +1,9 @@
+:root {
+  --background: #454545;
+  --primary: #007cbe;
+  --secondary: #3ba17f;
+}
+
 * {
   margin: 0;
   padding: 0;
