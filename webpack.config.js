@@ -10,7 +10,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js(x)*$/,
+        test: /\.js(x*)$/,
         use: ['babel-loader'],
         exclude: /node_modules/,
       },
@@ -23,6 +23,9 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
     modules: ['node_modules'],
+    alias: {
+      translate: path.resolve(__dirname, 'src/translate.js'),
+    },
   },
   plugins: [
     new HtmlWebpackPlugin({

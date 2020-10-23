@@ -9,7 +9,7 @@
   height: 12vh;
   width: 100%;
   padding-left: 3rem;
-  border-bottom-left-radius: 3rem; 
+  border-bottom-left-radius: 3rem;
   position: fixed;
   transition: all 0.5s ease-in;
   transition-property: height, border-radius;
@@ -22,7 +22,9 @@
   transition-property: height, border-radius;
 }
 
-.header h1,.header p, .header .btn-start {
+.header h1,
+.header p,
+.header .btn-start {
   position: relative;
   left: 0%;
   top: 0%;
@@ -30,20 +32,24 @@
   transition-property: position, left, top, opacity;
 }
 
-.header__expand h1,.header__expand p, .header__expand .btn-start {
+.header__expand h1,
+.header__expand p,
+.header__expand .btn-start {
   position: relative;
   left: 35%;
-  top: 40%;
+  top: 45%;
   transition: all 0.5s ease-in-out;
-  transition-property: position, left, top;
+  transition-property: position, left, top, opacity;
 }
 
-.header p, .header .btn-start {
-  opacity: 0%
+.header p,
+.header .btn-start {
+  opacity: 0%;
 }
 
-.header__expand p, .header__expand .btn-start {
-  opacity: 100%
+.header__expand p,
+.header__expand .btn-start {
+  opacity: 100%;
 }
 
 .btn {
@@ -60,22 +66,32 @@
   font-size: 1.2rem;
   padding: 1rem 2rem;
   border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+  box-shadow: 5px 5px black;
 }
 
 @media (max-width: 600px) {
   .header {
     font-size: 1rem;
-    height: 10vh;
+    height: 8vh;
     width: 100%;
     padding-left: 2rem;
   }
 
   .header__expand {
-    font-size: 1.2rem;
+    font-size: 1rem;
     height: 100%;
   }
-  
-  .header__expand h1,.header__expand p, .header__expand .btn-start {
+
+  .header__expand h1,
+  .header__expand p,
+  .header__expand .btn-start {
     left: 20%;
+  }
+
+  .header__expand .btn-start {
+    font-size: 1rem;
+    padding: 1rem;
   }
 }
